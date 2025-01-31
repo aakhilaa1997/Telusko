@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 public class Dev {
 
 
-    //Autowise to wire the connection between Dev and Laptop
+    //After adding Computer Interface, its more like its calling Computer instead of Laptop. Always call the end Object.
     @Autowired
-    private Laptop lappy;
+    private Computer comp;
 
 //		public Dev(Laptop lappy){
 //			this.lappy = lappy;
@@ -21,7 +21,7 @@ public class Dev {
 
     public void build(){
         //caling Laptop from another to this class. Class inside class
-        lappy.compile();
+        comp.compile();
         System.out.println("I am going to build an Awesome project!!!");
     }
 }
