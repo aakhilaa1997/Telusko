@@ -9,6 +9,11 @@ public class MyAppApplication {
 
 	public static void main(String[] args) {
 		//Creating obj with Dependency Injection
+		/*Here run itself returns the Application context obj that's why
+		  we are giving Application context as an assignee. And as we need to call the Dev class
+		  to implement the code, we need to Instantiate it. But assign it with the context
+		  It creates a bean of the de class and calls for the method
+		 */
 		ApplicationContext context = SpringApplication.run(MyAppApplication.class, args);
 		Dev obj = context.getBean(Dev.class);
 		obj.build();
